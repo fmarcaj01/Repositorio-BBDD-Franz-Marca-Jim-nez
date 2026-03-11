@@ -4,7 +4,7 @@ SET activo = FALSE
 WHERE nombre = 'Webcam HD' 
   AND proveedor_id IN (
       SELECT id 
-      FROM proveedores 
+      FROM proveedores p
       WHERE ciudad = 'Tarragona'
   );
 

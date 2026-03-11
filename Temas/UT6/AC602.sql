@@ -9,9 +9,9 @@ SET precio = precio * 1.05
 WHERE precio < 50;
 
 -- 3 Inserción con Sintaxis
-update proveedores p 
-set nombre ='GlobalTech SA', ciudad='Tarragona'
-where nombre='InforGlobal'
+UPDATE proveedores 
+SET nombre = 'GlobalTech SA', ciudad = 'Tarragona' 
+WHERE nombre = 'InforGlobal';
 -- 4
 UPDATE clientes 
 SET saldo = saldo * 1.10 
@@ -20,8 +20,9 @@ WHERE saldo > 100;
 -- 5 
 UPDATE productos 
 SET precio = precio * 1.15 
-WHERE id_proveedor = (
+WHERE proveedor_id = (
     SELECT id 
     FROM proveedores 
     WHERE nombre = 'ElectroComponentes'
+);
 );
